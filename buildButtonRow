@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-dynamic _buttonData(IconData? icon, String? text, Color? color) {
+_buttonData(IconData? icon, String? text, Color? color) {
   Column(
     children: [
       Icon(
-        icon!,
-        color: color!,
+        icon,
+        color: color,
       ),
       Text(text!),
     ],
@@ -13,7 +13,7 @@ dynamic _buttonData(IconData? icon, String? text, Color? color) {
 }
 
 class buildButtonRow extends StatelessWidget {
-  buildButtonRow({Key? key}) : super(key: key);
+  const buildButtonRow({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +21,18 @@ class buildButtonRow extends StatelessWidget {
       body: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [//share
- _buttonData(Icons.share, "Share", Colors.cyan),
+        children: [
+          //share
+          _buttonData(Icons.share, "Share", Colors.cyan),
+          //Rate now
 
-//Rate now
- 
-      _buttonData(Icons.star_border, "Rate now", Colors.yellowAccent),
+          _buttonData(Icons.star_border, "Rate now", Colors.yellowAccent),
 //Notifications
- 
-      _buttonData(Icons.notifications, "Notifications", Colors.blueAccent),
+
+          _buttonData(Icons.notifications, "Notifications", Colors.blueAccent),
 //Settings
- _buttonData(Icons.settings, 'Settings', Colors.red),
-],
+          _buttonData(Icons.settings, 'Settings', Colors.red),
+        ],
       ),
     );
   }
