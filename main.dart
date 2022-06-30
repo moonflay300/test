@@ -1,5 +1,5 @@
-//import 'package:cv_editing/pages/build_button.dart';
-import 'package:cv_editing/pages/frist_page.dart';
+import 'package:cv_editing/pages/build_button.dart';
+//import 'package:cv_editing/pages/frist_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,8 +19,8 @@ class CvEditing extends StatelessWidget {
           centerTitle: true,
           title: Text("Cv Editing"),
         ),
-        body: //buildButtonRow()
-            FristPage(),
+        body: buildButtonRow()
+           // FristPage(),
       ),
     );
   }
