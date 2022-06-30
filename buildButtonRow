@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+dynamic _buttonData(IconData? icon, String? text, Color? color) {
+  Column(
+    children: [
+      Icon(
+        icon!,
+        color: color!,
+      ),
+      Text(text!),
+    ],
+  );
+}
+
+class buildButtonRow extends StatelessWidget {
+  buildButtonRow({Key? key}) : super(key: key);
+//share
+  Widget share = _buttonData(Icons.share, "Share", Colors.cyan);
+
+//Rate now
+  Widget rateNow =
+      _buttonData(Icons.star_border, "Rate now", Colors.yellowAccent);
+//Notifications
+  Widget Notifications =
+      _buttonData(Icons.notifications, "Notifications", Colors.blueAccent);
+//Settings
+  Widget Settings = _buttonData(Icons.settings, 'Settings', Colors.red);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [share, rateNow, Notifications, Settings],
+      ),
+    );
+  }
+}
